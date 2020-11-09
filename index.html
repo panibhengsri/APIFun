@@ -2,7 +2,22 @@
 <html>
 <head>
 	<title>API FUN!</title>
-	<meta charset="utf-8"/>
+    <meta charset="utf-8"/>
+    <style>
+        h1 {
+            display: block;
+            font-family: "Trebuchet MS", Helvetica, sans-serif; color:black;
+            text-align: center;
+        }
+        h2 {
+            display: block;
+            font-family: "Trebuchet MS", Helvetica, sans-serif; color:black;
+        }
+        p {
+            display: block;
+            font-family: "Trebuchet MS", Helvetica, sans-serif; color:grey;
+        }
+    </style>
 	<script>
 		function getWeather() {
 			/* Step 1: Make instance of request object...to make HTTP request after page is loaded*/
@@ -25,8 +40,8 @@
                     document.getElementById("data").innerHTML = ""; 
                     for (var i = 0; i < hol["response"]["holidays"].length; i++ ){
                         document.getElementById("data").innerHTML += "<strong>" + hol["response"]["holidays"][i].name + "</strong><br>"; 
-                        document.getElementById("data").innerHTML += "Description: <br>&nbsp;&nbsp;&nbsp;&nbsp;" + hol["response"]["holidays"][i].description  + "<br>"; 
-                        document.getElementById("data").innerHTML += "Date: <br>&nbsp;&nbsp;&nbsp;&nbsp;" + hol["response"]["holidays"][i].date.iso  + "<br>"; 
+                        document.getElementById("data").innerHTML += "Description: &nbsp;&nbsp;&nbsp;&nbsp;" + hol["response"]["holidays"][i].description  + "<br>"; 
+                        document.getElementById("data").innerHTML += "Date: &nbsp;&nbsp;&nbsp;&nbsp;" + hol["response"]["holidays"][i].date.iso  + "<br>"; 
                         document.getElementById("data").innerHTML += "<br>"; 
                     } 
 				} else if (request.readyState == 4 && request.status != 200) {
@@ -45,19 +60,20 @@
 <body onload="getWeather()">
 
     <h1>Holidays in Thailand in 2020</h1>
-    <div>
-        <h3>Describe the API you selected and what it does: </h3>
-        <p> I selected a holiday calender free API that allows you to specific the country and year to display their holidays</p> <br>
-
-        <h3>Cite the website where you found it:</h3>
-        <p> https://calendarific.com/ </p><br>
-
-        <h3>Describe the options you used for the API request:</h3>
-        <p> I choose to display Thailand's holidays in 2020</p><br>
-
-        <h3>Give two applications where this API would be helpful:</h3>
-        <p> One application would be for companies check and display when the national holidays for their employees. Another application would be for schools to plan their curriculum for their students</p><br>
-    </div>
     <div id="data">Loading...</div>
+    <div>
+            <h2> Answers to Questions: </h2>
+            <h3>Describe the API you selected and what it does: </h3>
+            <p> I selected a holiday calender free API that allows you to specific the country and year to display their holidays</p> <br>
+    
+            <h3>Cite the website where you found it:</h3>
+            <p> https://calendarific.com/ </p><br>
+    
+            <h3>Describe the options you used for the API request:</h3>
+            <p> I choose to display Thailand's holidays in 2020</p><br>
+    
+            <h3>Give two applications where this API would be helpful:</h3>
+            <p> One application would be for companies check and display when the national holidays for their employees. Another application would be for schools to plan their curriculum for their students</p><br>
+    </div>
 </body>
 </html>
