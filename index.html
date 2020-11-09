@@ -1,3 +1,4 @@
+<!-- URL: https://panibhengsri.github.io/APIFun/ -->
 <!doctype html>
 <html>
 <head>
@@ -45,7 +46,7 @@
                     document.getElementById("data").innerHTML = ""; 
                     for (var i = 0; i < hol["response"]["holidays"].length; i++ ){
                         document.getElementById("data").innerHTML += "<strong>" + hol["response"]["holidays"][i].name + "</strong>";
-                        document.getElementById("data").innerHTML += "  " + hol["response"]["holidays"][i].date.iso  + "<br>";  
+                        document.getElementById("data").innerHTML += "   ---   " + hol["response"]["holidays"][i].date.iso  + "<br>";  
                         document.getElementById("data").innerHTML += hol["response"]["holidays"][i].description  + "<br>"; 
                         document.getElementById("data").innerHTML += "<br>"; 
                     } 
