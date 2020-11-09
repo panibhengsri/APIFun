@@ -19,7 +19,7 @@
         }
     </style>
 	<script>
-		function getWeather() {
+		function getInfo() {
 			/* Step 1: Make instance of request object...to make HTTP request after page is loaded*/
 			request = new XMLHttpRequest();
 			console.log("1 - request object created");
@@ -57,7 +57,7 @@
 	</script>
 </head>
 
-<body onload="getWeather()">
+<body onload="getInfo()">
 
     <h1>Holidays in Thailand in 2020</h1>
     <div id="data">Loading...</div>
