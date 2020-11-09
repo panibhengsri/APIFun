@@ -14,7 +14,7 @@
         crossorigin="anonymous" /> 
   
     <title> 
-        How to use simple API using AJAX ? 
+        API FUN!
     </title> 
 </head> 
   
@@ -25,7 +25,7 @@
     </button> 
   
     <div class="container"> 
-        <h1>Employee List</h1> 
+        <h1>Data List</h1> 
         <ul id="list"></ul> 
     </div> 
   
@@ -44,7 +44,7 @@
   
             // Open an obejct (GET/POST, PATH, 
             // ASYN-TRUE/FALSE) 
-            xhr.open("GET", "http://dummy.restapiexample.com/api/v1/employees", true); 
+            xhr.open("GET", "https://calendarific.com/api/v2", true); 
 
             // When response is ready 
             xhr.onload = function () { 
@@ -57,8 +57,7 @@
                     let list = document.getElementById("list"); 
                     str = "" 
                     for (key in obj.data) { 
-                        str +=  
-                        `<li>${obj.data[key].employee_name}</li>`; 
+                        str +=  `<li>${obj.data[key].employee_name}</li>`; 
                     } 
                     list.innerHTML = str; 
                 } 
@@ -80,12 +79,11 @@
         crossorigin="anonymous"> 
     </script> 
       
-    <script src= 
-"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity= 
-"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity= "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"> 
     </script> 
+
 </body> 
   
 </html> 
