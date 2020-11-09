@@ -5,7 +5,7 @@
 	<title>HOLIDAY API</title>
 	<meta charset="utf-8"/>
 	<script>
-		function getWeather() {
+		function getInfo() {
 			/* Step 1: Make instance of request object...
 			...to make HTTP request after page is loaded*/
 			request = new XMLHttpRequest();
@@ -13,7 +13,7 @@
  
 			// Step 2: Set the URL for the AJAX request to be the JSON file
  
-		request.open("GET", "https://calendarific.com/api/v2/holidays?&api_key=7d56b058ce2e59069eb0a11db5525e28ce4fcf1f&country=TH&year=2001", true);
+		    request.open("GET", "https://calendarific.com/api/v2/holidays?&api_key=7d56b058ce2e59069eb0a11db5525e28ce4fcf1f&country=TH&year=2020", true);
 
 			console.log("2 - opened request file");
  
@@ -33,8 +33,8 @@
                     for (var i = 0; i < hol["response"]["holidays"].length; i++ )
                     {
                         document.getElementById("data").innerHTML += "<strong>" + hol["response"]["holidays"][i].name + "</strong><br>"; 
-                        document.getElementById("data").innerHTML += "ABOUT: <br>&nbsp;&nbsp;&nbsp;&nbsp;" + hol["response"]["holidays"][i].description  + "<br>"; 
-                        document.getElementById("data").innerHTML += "WHEN: <br>&nbsp;&nbsp;&nbsp;&nbsp;" + hol["response"]["holidays"][i].date.iso  + "<br>"; 
+                        document.getElementById("data").innerHTML += "Description: <br>&nbsp;&nbsp;&nbsp;&nbsp;" + hol["response"]["holidays"][i].description  + "<br>"; 
+                        document.getElementById("data").innerHTML += "Date: <br>&nbsp;&nbsp;&nbsp;&nbsp;" + hol["response"]["holidays"][i].date.iso  + "<br>"; 
                         document.getElementById("data").innerHTML += "<br>"; 
 
 					
@@ -62,19 +62,21 @@
 </head>
 
 
-<body onload="getWeather()">
+<body onload="getInfo()">
 
-    <h1>2020 Holidays in Thailand</h1>
+    <h1>Holidays in Thailand in 2020</h1>
     <div>
-        NOTE:<br>
-        This calendar API gives you access to different holidays in the country you specified in the link.
-        <br> I found it here: https://calendarific.com/api-documentation
-        <br> In the API request, I chose Taiwan for the country field, and 2020 for the year. 
-        <br> This API would be extremely useful when you want an organized list of holidays in a certain country, 
-            also, it could be used easily for producing calendars, or products that you wish containing these information in different years. 
-        <br> Acknoledgment: In this assignment, I used the example file given by Lisa as template.
-        <br><br><br>
-    </div>
-	<div id="data">Loading...</div>
+        <h3> Describe the API you selected and what it does: </h3>
+        <p> I selected a holiday calender free API that allows you to specific the country and year to display their holidays</p> <br>
+
+        <h3> Cite the website where you found it </h3>
+        <p> https://calendarific.com/ </p><br>
+
+        <h3>Describe the options you used for the API request</h3>
+        <p> I choose to display Thailand's holidays in 2020</p><br>
+
+        <h3>Give two applications where this API would be helpful.</h3>
+        <p> One application would be for companies check and display when the national holidays for their employees. Another application would be for schools to plan their curriculum for their students</p><br>
+
 </body>
 </html>
