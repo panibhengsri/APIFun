@@ -4,7 +4,7 @@
 	<title>API FUN!</title>
 	<meta charset="utf-8"/>
 	<script>
-		function getInfo() {
+		function getWeather() {
 			/* Step 1: Make instance of request object...to make HTTP request after page is loaded*/
 			request = new XMLHttpRequest();
 			console.log("1 - request object created");
@@ -20,7 +20,7 @@
 					// Step 5: wait for done + success
 					console.log("5 - response received");
 					result = request.responseText;
-                    // document.write(result);
+
                     hol = JSON.parse(result);
                     document.getElementById("data").innerHTML = ""; 
                     for (var i = 0; i < hol["response"]["holidays"].length; i++ ){
@@ -42,7 +42,7 @@
 	</script>
 </head>
 
-<body onload="getInfo()">
+<body onload="getWeather()">
 
     <h1>Holidays in Thailand in 2020</h1>
     <div>
