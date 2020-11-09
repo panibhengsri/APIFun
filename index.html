@@ -44,8 +44,8 @@
                     document.getElementById("data").innerHTML = ""; 
                     for (var i = 0; i < hol["response"]["holidays"].length; i++ ){
                         document.getElementById("data").innerHTML += "<strong>" + hol["response"]["holidays"][i].name + "</strong><br>"; 
-                        document.getElementById("data").innerHTML += "Description: &nbsp;&nbsp;&nbsp;&nbsp;" + hol["response"]["holidays"][i].description  + "<br>"; 
-                        document.getElementById("data").innerHTML += "Date: &nbsp;&nbsp;&nbsp;&nbsp;" + hol["response"]["holidays"][i].date.iso  + "<br>"; 
+                        document.getElementById("data").innerHTML += "<u>Description: </u>" + hol["response"]["holidays"][i].description  + "<br>"; 
+                        document.getElementById("data").innerHTML += "<u>Date: </u>" + hol["response"]["holidays"][i].date.iso  + "<br>"; 
                         document.getElementById("data").innerHTML += "<br>"; 
                     } 
 				} else if (request.readyState == 4 && request.status != 200) {
