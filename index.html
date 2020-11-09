@@ -57,7 +57,7 @@
                     let list = document.getElementById("list"); 
                     str = "" 
                     for (key in obj.data) { 
-                        str +=  `<li>${obj.data[key].employee_name}</li>`; 
+                        str +=  `<li>${obj["response"]["holidays"][i].name}</li>`; 
                     } 
                     list.innerHTML = str; 
                 } 
@@ -68,6 +68,32 @@
             xhr.send(); 
         } 
     </script> 
+
+
+<!-- if (request.readyState == 4 && request.status == 200) {
+
+    // Step 5: wait for done + success
+    console.log("5 - response received");
+    result = request.responseText;
+    alert(result);
+    // document.write(result);
+    hol = JSON.parse(result);
+    document.getElementById("data").innerHTML = ""; 
+    for (var i = 0; i < hol["response"]["holidays"].length; i++ )
+    {
+        document.getElementById("data").innerHTML += "<strong>" + hol["response"]["holidays"][i].name + "</strong><br>"; 
+        document.getElementById("data").innerHTML += "What is this day about: " + hol["response"]["holidays"][i].description  + "<br>"; 
+        document.getElementById("data").innerHTML += "When: " + hol["response"]["holidays"][i].date.iso  + "<br>"; 
+        document.getElementById("data").innerHTML += "<br>"; 
+
+    
+    }
+    
+} -->
+
+
+
+
   
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity= "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
